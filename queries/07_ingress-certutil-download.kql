@@ -1,0 +1,11 @@
+let startTime = datetime(2025-11-19);
+let endTime   = datetime(2025-11-21);
+let device    = "azuki-sl";
+DeviceProcessEvents
+| where DeviceName == device
+| where Timestamp between (startTime .. endTime)
+| where FileName =~ "certutil.exe"
+| where ProcessCommandLine has_all ("-urlcache", "-f")
+| where ProcessCommandLine has "http"
+| project Timestamp, AccountName, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
+| order by Timestamp asc
