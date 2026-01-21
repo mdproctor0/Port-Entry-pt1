@@ -1,0 +1,10 @@
+let startTime = datetime(2025-11-19);
+let endTime   = datetime(2025-11-21);
+let device    = "azuki-sl";
+DeviceRegistryEvents
+| where DeviceName == device
+| where Timestamp between (startTime .. endTime)
+| where ActionType == "RegistryValueSet"
+| where RegistryKey has @"Windows Defender\Exclusions\Paths"
+| project Timestamp, RegistryKey, RegistryValueName, RegistryValueData, InitiatingProcessFileName, InitiatingProcessAccountName, InitiatingProcessCommandLine
+| order by Timestamp asc
