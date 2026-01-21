@@ -1,8 +1,5 @@
 ![Azuki Import/Export Threat Hunt Banner](assets/port-entry-pt1-header.png)
 
-![Initial Access Screenshot](assets/01_initial-access_external-rdp.png)
-
-
 # Azuki Import/Export Threat Hunt
 
 ## Overview
@@ -21,6 +18,13 @@ Target Sector: Logistics (East Asia)
 - Microsoft Defender for Endpoint
 - KQL (Kusto Query Language)
 - MITRE ATT&CK Framework
+
+## Skills Demonstrated
+- Threat hunting using Microsoft Sentinel and Defender for Endpoint
+- KQL query development across authentication, process, network, and registry telemetry
+- End-to-end incident response and attack lifecycle reconstruction
+- MITRE ATT&CK mapping and adversary behavior analysis
+- Detection of living-off-the-land techniques and credential abuse
 
 ## Investigation Scope
 - Initial Access
@@ -45,7 +49,8 @@ The following screenshots provide visual evidence supporting key stages of the a
 including initial access, execution, persistence, credential access, exfiltration, and attempted
 lateral movement.
 
-<img src="01_initial-access_external-rdp.png .png">
+![Initial Access Screenshot](assets/01_initial-access_external-rdp.png)
+
 
 
 ## Outcome
