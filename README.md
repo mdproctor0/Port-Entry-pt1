@@ -1,5 +1,8 @@
 ![Azuki Import/Export Threat Hunt Banner](assets/port-entry-pt1-header.png)
 
+![Initial Access Screenshot](assets/01_initial-access_external-rdp.png)
+
+
 # Azuki Import/Export Threat Hunt
 
 ## Overview
@@ -34,7 +37,16 @@ Target Sector: Logistics (East Asia)
 - `queries/` – KQL queries used for each investigation flag
 - `timeline/` – Chronological attack progression
 - `mitre-mapping/` – ATT&CK technique mapping
-- `screenshots/` – Supporting evidence
+- `assets/` – Investigation screenshots supporting each attack phase
+
+## Investigation Evidence
+
+The following screenshots provide visual evidence supporting key stages of the attack lifecycle,
+including initial access, execution, persistence, credential access, exfiltration, and attempted
+lateral movement.
+
+<img src="01_initial-access_external-rdp.png .png">
+
 
 ## Outcome
 The attacker successfully:
