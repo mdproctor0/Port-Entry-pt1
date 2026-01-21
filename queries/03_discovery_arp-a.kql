@@ -1,0 +1,11 @@
+let startTime = datetime(2025-11-19);
+let endTime   = datetime(2025-11-21);
+let device    = "azuki-sl";
+let user      = "kenji.sato";
+DeviceProcessEvents
+| where DeviceName == device
+| where Timestamp between (startTime .. endTime)
+| where AccountName =~ user
+| where FileName =~ "arp.exe" or ProcessCommandLine has "arp -a"
+| project Timestamp, AccountName, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
+| order by Timestamp asc
