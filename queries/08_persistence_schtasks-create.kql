@@ -1,0 +1,10 @@
+let startTime = datetime(2025-11-19);
+let endTime   = datetime(2025-11-21);
+let device    = "azuki-sl";
+DeviceProcessEvents
+| where DeviceName == device
+| where Timestamp between (startTime .. endTime)
+| where FileName =~ "schtasks.exe"
+| where ProcessCommandLine has_all ("/create")
+| project Timestamp, DeviceName, AccountName, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
+| order by Timestamp asc
