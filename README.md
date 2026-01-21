@@ -1,4 +1,4 @@
-![Azuki Import/Export Threat Hunt Banner](screenshots/azuki-threat-hunt-banner.png)
+![Azuki Import/Export Threat Hunt Banner](assets/port-entry-pt1-header.png)
 
 # Azuki Import/Export Threat Hunt
 
