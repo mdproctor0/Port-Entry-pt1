@@ -1,0 +1,4 @@
+let startTime = datetime(2025-11-19);
+let endTime   = datetime(2025-11-21);
+let device    = "azuki-sl";
+let user      = "kenji.sato";
